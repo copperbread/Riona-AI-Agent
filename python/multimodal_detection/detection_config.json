@@ -1,0 +1,8 @@
+{
+  "api_key": "your_api_key_here",
+  "api_url": "https://api.openai.com/v1/chat/completions",
+  "model_name": "Qwen/Qwen2.5-VL-72B-Instruct",
+  "confidence_threshold": 0.3,
+  "max_batch_size": 50,
+  "timeout": 60
+}

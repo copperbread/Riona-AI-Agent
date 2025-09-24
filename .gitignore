@@ -126,3 +126,29 @@ public/build
 
 # Plop js template files
 .plop-templates
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Multi-modal detection results and temporary files
+python/multimodal_detection/logs/
+python/multimodal_detection/detection_results/
+python/multimodal_detection/example_images/
+*.png
+*.jpg
+*.jpeg
+*.bmp
+*.tiff
+*.webp
