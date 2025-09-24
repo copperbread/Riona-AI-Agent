@@ -11,6 +11,15 @@ Before using the automation features, you can personalize the agent by uploading
 
 ## Features
 
+- **Instagram Bot**: Automated interaction with Instagram using advanced browser automation.
+- **Twitter Integration**: Automated posting and interaction capabilities.
+- **AI-Powered Content Generation**: Uses Google's Generative AI for content creation.
+- **Multi-Modal Detection**: Python-based object detection supporting RGB and IR images with Qwen2.5-VL-72B-Instruct model.
+- **Training Capabilities**: Support for training AI agents with various data sources (YouTube, audio, files, websites).
+- **Robust Error Handling**: Comprehensive error management and logging system.
+- **Cross-Platform Compatibility**: Works on Windows, Linux, and macOS.
+- **Batch Processing**: Efficient processing of multiple images with progress tracking.
+
 - **Instagram Automation**: Automatically log in, post photos, like posts, and leave thoughtful comments.
 - **AI-Powered Content Generation**: Use Google Generative AI to create engaging captions and comments.
 - **Proxy Support**: Use proxies to manage multiple accounts and avoid rate limits.
@@ -47,13 +56,35 @@ Before using the automation features, you can personalize the agent by uploading
 
    MONGODB_URI= #MongoDB URI
 
+   # Multi-Modal Detection (Optional)
+   QWEN_API_KEY=your_qwen_api_key
+   QWEN_API_URL=https://api.openai.com/v1/chat/completions
+
 ```
+
+4. **Install Python dependencies for multi-modal detection** (Optional):
+   ```sh
+   pip install -r requirements.txt
+   ```
 
 ## Usage
 
 1. **Run the Instagram agent**:
    ```sh
    npm start
+   ```
+
+2. **Multi-Modal Object Detection**:
+   ```sh
+   # Single image detection
+   python python/multimodal_detection/detector.py image.jpg --output results/
+   
+   # Batch processing with visualization
+   python python/multimodal_detection/detector.py images/ --batch --visualize --yolo
+   
+   # Run examples and demos
+   python python/multimodal_detection/example_usage.py
+   python python/multimodal_detection/demo.py
    ```
 
 **Upcoming Features:**
@@ -78,6 +109,7 @@ Before using the automation features, you can personalize the agent by uploading
 - **src/Agent/training**: Training scripts for the AI agent.
 - **src/schema**: Schema definitions for AI-generated content and database models.
 - **src/test**: Contains test data and scripts, such as example tweets.
+- **python/multimodal_detection**: Python-based multi-modal object detection system using Qwen2.5-VL-72B-Instruct model.
 
 ## Logging
 
